@@ -10,9 +10,10 @@ import { fetchChatGroups } from "@/fetch/groupFetch";
 
 export default async function Home() {
   const session:CustomSession | null = await getServerSession(authOptions);
-   const groups: Array<GroupChatType> | [] = await fetchChatGroups(
-    session?.user?.token!
-  );
+   let groups: Array<GroupChatType> = [];
+  if (session?.user?.token) {
+    groups = await fetchChatGroups(session.user.token);
+  }
   return (
     <div className="min-h-screen flex flex-col ">
       {/* Header */}
@@ -33,3 +34,4 @@ export default async function Home() {
     
   
 }
+
