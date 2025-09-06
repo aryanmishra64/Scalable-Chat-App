@@ -51,8 +51,6 @@ controllers/ # Auth & chat controllers
 routes/ # API routes
 socket.ts # Socket.IO setup
 
-yaml
-Copy code
 
 ---
 
@@ -60,19 +58,15 @@ Copy code
 
 ### 1️⃣ Clone Repository
 git clone https://github.com/aryanmishra64/chat-app.git
-cd chat-app
 
-shell
-Copy code
+cd chat-app
 
 ### 2️⃣ Setup Backend
 cd server
 npm install
 
-markdown
-Copy code
-
 - Configure `.env` file:
+
 PORT=7000
 DATABASE_URL=your_postgres_url
 REDIS_URL=your_redis_url
@@ -81,43 +75,23 @@ KAFKA_USERNAME=your_kafka_username
 KAFKA_PASSWORD=your_kafka_password
 KAFKA_TOPIC=chats
 
-diff
-Copy code
-
-- Run migrations:
-npx prisma migrate dev
-
-diff
-Copy code
-
-- Start server:
-npm run dev
-
-shell
-Copy code
 
 ### 3️⃣ Setup Frontend
+
 cd client
 npm install
 
-markdown
-Copy code
-
 - Configure `.env.local`:
 NEXT_PUBLIC_BACKEND_URL=http://localhost:7000
+
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
 NEXTAUTH_SECRET=your_secret
 NEXTAUTH_URL=http://localhost:3000
 
-diff
-Copy code
 
 - Start client:
-npm run dev
 
-yaml
-Copy code
 
 Frontend runs at 👉 http://localhost:3000  
 Backend runs at 👉 http://localhost:7000  
@@ -143,5 +117,7 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 - Aryan Mishra  
+ 
+
 
 
